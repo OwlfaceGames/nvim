@@ -8,6 +8,8 @@ local opt = vim.opt -- set local var for vim opt
 opt.relativenumber = false -- set line numbers
 opt.number = false
 
+opt.wrap = false
+
 -- tabs & indentation
 opt.tabstop = 2 -- 2 stpaces for tabs
 opt.shiftwidth = 2 -- 2 spaces for indent width
