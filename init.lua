@@ -275,7 +275,8 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 -- vim.cmd("colorscheme owl_zen_blue")
 -- vim.cmd("colorscheme owl_zen_black")
 -- vim.cmd("colorscheme owl_zen_green_black")
-vim.cmd("colorscheme owl_zen_green_grey")
+-- vim.cmd("colorscheme owl_zen_green_grey")
+vim.cmd("colorscheme owl_zen_green_grey_invert_selection")
 
 -------------------------
 -- Custom vim terminal --
