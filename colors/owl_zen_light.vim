@@ -11,7 +11,7 @@ if &background == 'dark'
   let s:guiaccent1 = "#000000"
   let s:guiaccent2 = "#000000"
   let s:guiaccent3 = "#6bad00"
-  let s:guiaccent4 = "#000000"
+  let s:guiaccent4 = "#7c6385"
   let s:guiaccent5 = "#8a8a8a"
   let s:guiaccent6 = "#000000"
   let s:guiaccent7 = "#f09930"
