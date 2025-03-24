@@ -1,6 +1,6 @@
 return {
-  "nickpith/issue-from-comment",
-  dir = vim.fn.stdpath("config") .. "/lua/nick/plugins/issue-from-comment",
+  "OwlfaceGames/issue-from-comment",
+  -- dir = vim.fn.stdpath("config") .. "/lua/nick/plugins/issue-from-comment",
   config = function()
     require("issue_from_comment").setup({
       github_owner = "OwlfaceGames",
