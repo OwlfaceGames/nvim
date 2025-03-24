@@ -1,6 +1,6 @@
 -- In your plugins configuration
 return {
-  "OwlfaceGames/issue-from-comment",
+  "OwlfaceGames/issue-from-comment.nvim",
   config = function()
     require("issue_from_comment").setup({
       github_owner = "OwlfaceGames",
