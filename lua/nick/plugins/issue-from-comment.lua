@@ -1,16 +1,16 @@
+-- In your plugins configuration
 return {
   "OwlfaceGames/issue-from-comment",
-  -- dir = vim.fn.stdpath("config") .. "/lua/nick/plugins/issue-from-comment",
   config = function()
     require("issue_from_comment").setup({
       github_owner = "OwlfaceGames",
       github_repo = "earthen_heart",
-      github_token = os.getenv("$GITHUB_TOKEN"),
-      default_labels = { "focus" }, -- Set your default labels here
-      -- default_assignees = { "your-username" }, -- Set default assignees
+      default_labels = { "focus" },
+      create_key = '<Leader>gc', -- Custom key to create the issue
+      cancel_key = 'q',          -- Custom key to cancel
     })
 
-    -- Set up keymaps
+    -- Keymapping to open the issue creation buffer
     vim.keymap.set("n", "<Leader>gi", ":GHIssueFromComment<CR>", { noremap = true, silent = true })
   end,
 }
