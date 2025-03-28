@@ -6,11 +6,16 @@ return {
   "shortcuts/no-neck-pain.nvim",
   'norcalli/nvim-colorizer.lua',
 
- {
-        "lukas-reineke/headlines.nvim",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true, -- or `opts = {}`
-    },
+  {
+    'alvarosevilla95/luatab.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+
+  {
+    "lukas-reineke/headlines.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true, -- or `opts = {}`
+  },
 
   {
     "williamboman/mason.nvim",
