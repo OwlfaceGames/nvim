@@ -375,11 +375,10 @@ vim.keymap.set("n", "<space>zr", function()
   vim.fn.chansend(job_id, { "zig build run\r\n" })
 end)
 
-
 -- tweak colors
--- vim.cmd [[hi @variable guifg=#AF9374]]
--- vim.cmd [[hi @operator guifg=#AF9374]]
--- vim.cmd [[hi @punctuation guifg=#AF9374]]
+-- vim.cmd [[hi @variable guifg=#dcdfe4]]
+-- vim.cmd [[hi @operator guifg=#dcdfe4]]
+-- vim.cmd [[hi @punctuation guifg=#dcdfe4]]
 -- vim.cmd [[hi @string guifg=#D9AA1A]]
 -- vim.cmd [[hi @type.builtin guifg=#DBDE7]]
 

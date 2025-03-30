@@ -24,8 +24,7 @@ let s:yellow      = { "gui": "#e5c07b", "cterm": "180" }
 let s:blue        = { "gui": "#61afef", "cterm": "75"  }
 let s:purple      = { "gui": "#c678dd", "cterm": "176" }
 let s:cyan        = { "gui": "#56b6c2", "cterm": "73"  }
-let s:white       = { "gui": "#968368", "cterm": "332" }
-" let s:white       = { "gui": "#dcdfe4", "cterm": "188" }" default color
+let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
 
 let s:fg          = s:white
 let s:bg          = s:black
@@ -223,5 +222,3 @@ hi link gitcommitUnmergedArrow gitcommitUnmergedFile
     let g:terminal_color_foreground = s:fg.gui
   endif
 " }
-
-exec "hi Visual gui=reverse cterm=reverse"
