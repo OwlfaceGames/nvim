@@ -5,6 +5,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   "shortcuts/no-neck-pain.nvim",
   'norcalli/nvim-colorizer.lua',
+  "savq/melange-nvim",
 
   {
     'alvarosevilla95/luatab.nvim',
