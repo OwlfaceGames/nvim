@@ -282,8 +282,8 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 -- vim.cmd("colorscheme owl_zen_green_grey_invert_selection")
 -- vim.cmd("colorscheme owl_zen_light")
 -- vim.cmd("colorscheme onehalfdark")
--- vim.cmd.colorscheme 'melange'
-vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'melange'
+-- vim.cmd.colorscheme 'gruvbox'
 
 -- reverse color selection
 vim.cmd [[hi Visual gui=reverse cterm=reverse]]
