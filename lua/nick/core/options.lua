@@ -38,3 +38,6 @@ opt.iskeyword:append("_")
 
 -- thick cursor
 opt["guicursor"] = ""
+
+-- add column for colum width
+vim.opt.colorcolumn = "75"
