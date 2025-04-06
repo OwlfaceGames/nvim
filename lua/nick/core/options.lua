@@ -40,4 +40,4 @@ opt.iskeyword:append("_")
 opt["guicursor"] = ""
 
 -- add column for colum width
-vim.opt.colorcolumn = "75"
+vim.opt.colorcolumn = "80"
