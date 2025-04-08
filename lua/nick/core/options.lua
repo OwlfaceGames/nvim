@@ -39,5 +39,5 @@ opt.iskeyword:append("_")
 -- thick cursor
 opt["guicursor"] = ""
 
--- add column for colum width
-vim.opt.colorcolumn = "120"
+-- add column to warn when code is getting too long
+vim.opt.colorcolumn = "80"
