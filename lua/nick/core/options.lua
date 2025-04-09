@@ -11,8 +11,8 @@ opt.number = true
 opt.wrap = false
 
 -- tabs & indentation
-opt.tabstop = 2       -- 2 stpaces for tabs
-opt.shiftwidth = 2    -- 2 spaces for indent width
+-- opt.tabstop = 2       -- 2 stpaces for tabs
+-- opt.shiftwidth = 2    -- 2 spaces for indent width
 opt.expandtab = true  -- expand tab spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
