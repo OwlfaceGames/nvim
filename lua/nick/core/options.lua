@@ -10,6 +10,9 @@ opt.number = true
 
 opt.wrap = false
 
+-- Disable Shift+J
+vim.keymap.set('n', 'J', '<Nop>', { noremap = true })
+
 -- tabs & indentation
 opt.tabstop = 4       -- 4 stpaces for tabs
 opt.shiftwidth = 4    -- 4 spaces for indent width
