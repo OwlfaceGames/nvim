@@ -283,9 +283,16 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 -- vim.cmd("colorscheme owl_zen_light")
 -- vim.cmd("colorscheme onehalfdark")
 -- vim.cmd.colorscheme 'melange'
-vim.cmd.colorscheme 'gruvbox'
+-- vim.cmd.colorscheme 'gruvbox'
 -- vim.cmd.colorscheme 'rose-pine'
 -- vim.cmd.colorscheme 'catppuccin'
+-- vim.cmd.colorscheme 'quiet'
+-- vim.cmd.colorscheme 'moonfly'
+-- vim.cmd.colorscheme 'kanagawa-dragon'
+vim.cmd.colorscheme 'base16-default-dark'
+-- vim.cmd.colorscheme 'monokai-pro'
+-- vim.cmd.colorscheme 'github_dark_default'
+-- vim.cmd.colorscheme 'github_dark_tritanopia'
 
 -- reverse color selection
 vim.cmd [[hi Visual gui=reverse cterm=reverse]]
