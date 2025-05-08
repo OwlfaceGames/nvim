@@ -3,6 +3,10 @@
 -----------------
 vim.cmd("let g:netrw_liststyle = 3") -- set exploreer style to tree
 
+-- swap p and shift p binds for visual mode for normal paste over functionality
+vim.keymap.set('v', 'p', 'P', { noremap = true })
+vim.keymap.set('v', 'P', 'p', { noremap = true })
+
 local opt = vim.opt                  -- set local var for vim opt
 
 opt.relativenumber = true            -- set line numbers
