@@ -421,12 +421,12 @@ end)
 -- vim.cmd [[hi @type.builtin guifg=#DBDE7]]
 
 -- set conceal level for markdown files for use with obsidian vault
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
-    callback = function()
-        vim.opt_local.conceallevel = 1
-    end
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = "markdown",
+--     callback = function()
+--         vim.opt_local.conceallevel = 1
+--     end
+-- })
 
 -- HACK: markdown headline - this is kinda hacked together the queries were erroring that i got from the github config so i just deleted all queries from the config and it now works how i want
 require("headlines").setup {
