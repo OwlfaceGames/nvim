@@ -13,8 +13,5 @@ return {
                 vim.log.levels.WARN)
             return
         end
-
-        -- Configure with default settings
-        dash.setup()
     end,
 }
