@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- open dash
+keymap.set("n", "<leader>d", ":Dash<CR>", { desc = "Search Dash.app" })
+
 -- clear highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
