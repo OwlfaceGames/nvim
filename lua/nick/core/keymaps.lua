@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- Map gd to LSP definition
+keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = true, silent = true })
+
 -- open dash
 keymap.set("n", "<leader>ds", ":Dash<CR>", { desc = "Search Dash.app" })
 keymap.set("n", "<leader>dc", ":Dash <C-r><C-w><CR>", { desc = "Search word under cursor in Dash.app" })
