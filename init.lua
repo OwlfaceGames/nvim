@@ -297,6 +297,30 @@ vim.cmd.colorscheme 'base16-default-dark'
 -- reverse color selection
 vim.cmd [[hi Visual gui=reverse cterm=reverse]]
 
+-------------------------------------------------------------------------------------------------------------------------------------
+-- modify colorscheme for autocomplete to be more visible and make harpoon the same, everything else is set to defualt colorscheme --
+-------------------------------------------------------------------------------------------------------------------------------------
+local col_bg = "#163530"
+local col_fg = "#f8f8f8"
+local col_title = "#f99157"
+
+-- Set the highlight groups for floating windows
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = col_bg })              -- Dark grey background
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = col_fg, bg = col_bg }) -- Border color
+
+-- Make Harpoon buffer elements consistent
+vim.api.nvim_set_hl(0, "LineNr", { bg = col_bg })                     -- Line numbers background
+vim.api.nvim_set_hl(0, "SignColumn", { bg = col_bg })                 -- Sign column background
+vim.api.nvim_set_hl(0, "HarpoonWindow", { bg = col_bg })              -- Harpoon window background
+vim.api.nvim_set_hl(0, "HarpoonBorder", { fg = col_fg, bg = col_bg }) -- Harpoon border
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = col_fg, bg = col_bg })  -- Window separators
+vim.api.nvim_set_hl(0, "Title", { fg = col_title, bg = col_bg })      -- Window separators
+
+-- Reset highlights to normal editor theme
+vim.api.nvim_set_hl(0, "LineNr", {})       -- This removes your custom setting
+vim.api.nvim_set_hl(0, "SignColumn", {})   -- This removes your custom setting
+vim.api.nvim_set_hl(0, "WinSeparator", {}) -- This removes your custom setting
+
 -------------------------
 -- Custom vim terminal --
 -------------------------
@@ -397,12 +421,12 @@ end)
 -- vim.cmd [[hi @type.builtin guifg=#DBDE7]]
 
 -- set conceal level for markdown files for use with obsidian vault
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
-    callback = function()
-        vim.opt_local.conceallevel = 1
-    end
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = "markdown",
+--     callback = function()
+--         vim.opt_local.conceallevel = 1
+--     end
+-- })
 
 -- HACK: markdown headline - this is kinda hacked together the queries were erroring that i got from the github config so i just deleted all queries from the config and it now works how i want
 require("headlines").setup {
