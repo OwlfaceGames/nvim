@@ -5,10 +5,6 @@ local keymap = vim.keymap -- for conciseness
 -- Map gd to LSP definition
 keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = true, silent = true })
 
--- open dash
-keymap.set("n", "<leader>ds", ":Dash<CR>", { desc = "Search Dash.app" })
-keymap.set("n", "<leader>dc", ":Dash <C-r><C-w><CR>", { desc = "Search word under cursor in Dash.app" })
-
 -- clear highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
@@ -43,10 +39,6 @@ keymap.set("n", "<leader>nn", "<cmd>NoNeckPain<CR>", { desc = "Toggle no neck pa
 -- line numbers
 keymap.set('n', '<leader>nln', ':setlocal nonumber norelativenumber <CR>')
 keymap.set('n', '<leader>ln', ':setlocal number relativenumber <CR>')
-
--- enable neocodium
-keymap.set('n', '<leader>ai', ':NeoCodeium enable<CR>')
-keymap.set('n', '<leader>nai', ':NeoCodeium disable<CR>')
 
 -- oil
 keymap.set('n', '<leader>o', ':Oil<CR>')

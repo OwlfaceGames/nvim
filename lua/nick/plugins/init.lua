@@ -5,26 +5,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     "shortcuts/no-neck-pain.nvim",
     'norcalli/nvim-colorizer.lua',
-    "savq/melange-nvim",
-    "ellisonleao/gruvbox.nvim",
-    "rose-pine/neovim",
-    "catppuccin/nvim",
-    "bluz71/vim-moonfly-colors",
-    "rebelot/kanagawa.nvim",
-    "RRethy/base16-nvim",
-    "loctvl842/monokai-pro.nvim",
-    "projekt0n/github-nvim-theme",
-
-    {
-        'alvarosevilla95/luatab.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-    },
-
-    {
-        "lukas-reineke/headlines.nvim",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true, -- or `opts = {}`
-    },
 
     {
         "williamboman/mason.nvim",
@@ -65,17 +45,6 @@ return {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
-    },
-
-    {
-        "monkoose/neocodeium",
-        event = "VeryLazy",
-        config = function()
-            local neocodeium = require("neocodeium")
-
-            neocodeium.setup()
-            vim.keymap.set("i", "<A-l>", neocodeium.accept)
-        end,
     },
 
     {
