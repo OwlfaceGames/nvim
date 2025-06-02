@@ -3,7 +3,7 @@ require("nick.core")
 require("nick.lazy")
 
 -- set colorscheme
-vim.cmd.colorscheme('retrobox')
+vim.cmd.colorscheme('melange')
 
 -- tree sitter
 require 'nvim-treesitter.configs'.setup {
@@ -238,14 +238,14 @@ lspconfig.jsonls.setup({
 })
 
 -- format these files on save
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-        pattern = {
-                -- "*.c", "*.h", "*.cpp", "*.hpp", "*.lua", "*.json",
-                -- "*.py", "*.ts", "*.js", "*.jsx", "*.tsx",
-                -- "*.rs", "*.go", "*.html", "*.css"
-        },
-        desc = "formats code on save with lsp",
-        callback = function()
-                vim.lsp.buf.format()
-        end,
-})
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+--         pattern = {
+--                 "*.c", "*.h", "*.cpp", "*.hpp", "*.lua", "*.json",
+--                 "*.py", "*.ts", "*.js", "*.jsx", "*.tsx",
+--                 "*.rs", "*.go", "*.html", "*.css"
+--         },
+--         desc = "formats code on save with lsp",
+--         callback = function()
+--                 vim.lsp.buf.format()
+--         end,
+-- })
