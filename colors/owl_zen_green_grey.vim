@@ -1,5 +1,5 @@
 if &background == 'dark'
-  let s:guishade0 = "#000000"
+  let s:guishade0 = "#1a1a1a"
   let s:guishade1 = "#3e2a45"
   let s:guishade2 = "#3d3d3d"
   let s:guishade3 = "#4B5345"
