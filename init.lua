@@ -3,7 +3,8 @@ require("nick.core")
 require("nick.lazy")
 
 -- set colorscheme
-vim.cmd.colorscheme('melange')
+-- vim.cmd.colorscheme('melange')
+vim.cmd.colorscheme('owl_zen_green_grey')
 
 -- tree sitter
 require 'nvim-treesitter.configs'.setup {
