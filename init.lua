@@ -252,5 +252,5 @@ lspconfig.jsonls.setup({
 -- })
 
 -- Inverted selection highlighting
-vim.api.nvim_set_hl(0, 'Visual', { reverse = true })
-vim.api.nvim_set_hl(0, 'VisualNOS', { reverse = true })
+-- vim.api.nvim_set_hl(0, 'Visual', { reverse = true })
+-- vim.api.nvim_set_hl(0, 'VisualNOS', { reverse = true })
