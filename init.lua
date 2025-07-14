@@ -100,7 +100,7 @@ vim.keymap.set("n", "<leader>ht", function() toggle_telescope(harpoon:list()) en
         { desc = "Open harpoon window" })
 
 -- oil
-require("oil").setup()
+-- require("oil").setup()
 
 ------------------------------------------
 -- require colorizer to color hex codes --
