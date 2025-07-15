@@ -1,7 +1,7 @@
 -----------------
 -- vim options --
 -----------------
-vim.cmd("let g:netrw_liststyle = 3") -- set exploreer style to tree
+-- vim.cmd("let g:netrw_liststyle = 3") -- set exploreer style to tree
 
 -- swap p and shift p binds for visual mode for normal paste over functionality
 vim.keymap.set('v', 'p', 'P', { noremap = true })
