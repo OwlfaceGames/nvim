@@ -238,6 +238,52 @@ lspconfig.jsonls.setup({
         },
 })
 
+-- Ruby (solargraph)
+lspconfig.solargraph.setup({
+        settings = {
+                solargraph = {
+                        diagnostics = true,
+                        completion = true,
+                        hover = true,
+                        formatting = true,
+                },
+        },
+})
+
+
+-- Tailwind CSS
+lspconfig.tailwindcss.setup({
+        settings = {
+                tailwindCSS = {
+                        classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+                        lint = {
+                                cssConflict = "warning",
+                                invalidApply = "error",
+                                invalidConfigPath = "error",
+                                invalidTailwindDirective = "error",
+                                invalidVariant = "error",
+                                invalidScreen = "error",
+                        },
+                        validate = true,
+                },
+        },
+        filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "erb" },
+})
+
+-- Vue
+lspconfig.volar.setup({
+        settings = {
+                vue = {
+                        inlayHints = {
+                                missingProps = true,
+                                inlineHandlerLeading = true,
+                                optionsWrapper = true,
+                        },
+                },
+        },
+        filetypes = { "vue" },
+})
+
 -- format these files on save
 -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 --         pattern = {
