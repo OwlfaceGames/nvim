@@ -3,8 +3,8 @@ require("nick.core")
 require("nick.lazy")
 
 -- set colorscheme
--- vim.cmd.colorscheme('melange')
-vim.cmd.colorscheme('owl_zen_green_grey')
+vim.cmd.colorscheme('melange')
+-- vim.cmd.colorscheme('owl_zen_green_grey')
 
 -- tree sitter
 require 'nvim-treesitter.configs'.setup {
@@ -100,7 +100,7 @@ vim.keymap.set("n", "<leader>ht", function() toggle_telescope(harpoon:list()) en
         { desc = "Open harpoon window" })
 
 -- oil
--- require("oil").setup()
+require("oil").setup()
 
 ------------------------------------------
 -- require colorizer to color hex codes --
@@ -298,5 +298,5 @@ lspconfig.volar.setup({
 -- })
 
 -- Inverted selection highlighting
--- vim.api.nvim_set_hl(0, 'Visual', { reverse = true })
--- vim.api.nvim_set_hl(0, 'VisualNOS', { reverse = true })
+vim.api.nvim_set_hl(0, 'Visual', { reverse = true })
+vim.api.nvim_set_hl(0, 'VisualNOS', { reverse = true })
