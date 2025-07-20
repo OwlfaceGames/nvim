@@ -41,7 +41,7 @@ keymap.set('n', '<leader>nln', ':setlocal nonumber norelativenumber <CR>')
 keymap.set('n', '<leader>ln', ':setlocal number relativenumber <CR>')
 
 -- oil
--- keymap.set('n', '<leader>o', ':Oil<CR>')
+keymap.set('n', '<leader>o', ':Oil<CR>')
 
 -- open exporer
 keymap.set('n', '<leader>e', ':ex .<CR>')
