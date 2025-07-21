@@ -12,6 +12,7 @@
   "mason.nvim": { "branch": "main", "commit": "8024d64e1330b86044fed4c8494ef3dcd483a67c" },
   "melange-nvim": { "branch": "master", "commit": "ce42f6b629beeaa00591ba73a77d3eeac4cf28ce" },
   "mini.icons": { "branch": "main", "commit": "94848dad1589a199f876539bd79befb0c5e3abf0" },
+  "mini.starter": { "branch": "main", "commit": "1c6467a6a46e02a0f6202de2f69ef6533fe95659" },
   "no-neck-pain.nvim": { "branch": "main", "commit": "7bf83d3cfc8f6a120734f4254bbb87928756bea0" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
   "nvim-lspconfig": { "branch": "master", "commit": "f47cd681d7cb6048876a2e908b6d8ba1e530d152" },
