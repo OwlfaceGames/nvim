@@ -6,4 +6,5 @@ return {
 	"shortcuts/no-neck-pain.nvim",
 	"norcalli/nvim-colorizer.lua",
 	"savq/melange-nvim",
+        "mbbill/undotree",
 }
