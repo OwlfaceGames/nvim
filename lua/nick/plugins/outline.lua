@@ -6,8 +6,7 @@ return {
 
 		require("outline").setup {
 			outline_window = {
-				position = 'left',
-				width = 18,
+				position = 'right',
 			},
 		}
 	end,
