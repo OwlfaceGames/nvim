@@ -298,5 +298,5 @@ lspconfig.volar.setup({
 -- })
 
 -- Inverted selection highlighting
-vim.api.nvim_set_hl(0, 'Visual', { reverse = true })
-vim.api.nvim_set_hl(0, 'VisualNOS', { reverse = true })
+vim.api.nvim_set_hl(0, 'Visual', { bg = '#071afb' })
+vim.api.nvim_set_hl(0, 'VisualNOS', { bg = '#071afb' })
