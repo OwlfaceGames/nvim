@@ -300,3 +300,15 @@ lspconfig.volar.setup({
 -- Inverted selection highlighting
 vim.api.nvim_set_hl(0, 'Visual', { bg = '#071afb' })
 vim.api.nvim_set_hl(0, 'VisualNOS', { bg = '#071afb' })
+
+-- Highlights the current match as you type
+vim.api.nvim_set_hl(0, 'IncSearch', { bg = '#ff6600', fg = '#ffffff' })
+
+-- Highlights ALL matches after pressing Enter
+vim.api.nvim_set_hl(0, 'Search', { bg = '#ffff00', fg = '#000000' })
+
+-- Highlights the match your cursor is currently on when navigating with
+vim.api.nvim_set_hl(0, 'CurSearch', { bg = '#ff1493', fg = '#ffffff' })
+
+-- Highlights text being replaced during substitute operations
+vim.api.nvim_set_hl(0, 'Substitute', { bg = '#8a2be2', fg = '#ffffff' })
