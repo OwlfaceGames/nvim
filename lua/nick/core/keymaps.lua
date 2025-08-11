@@ -46,6 +46,9 @@ keymap.set('n', '<leader>o', ':Oil<CR>')
 -- open exporer
 keymap.set('n', '<leader>e', ':Neotree<CR>')
 
+-- neocodeium
+keymap.set('n', '<leader>n', ':NeoCodeium toggle<CR>')
+
 -- quick list
 keymap.set('n', '<leader>qo', ':copen<CR>')
 keymap.set('n', '<leader>qn', ':cNext<CR>')
