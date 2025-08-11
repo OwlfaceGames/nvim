@@ -283,6 +283,26 @@ lspconfig.volar.setup({
         filetypes = { "vue" },
 })
 
+-- Swift (sourcekit-lsp)
+lspconfig.sourcekit.setup({
+        cmd = { "sourcekit-lsp" },
+        filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp" },
+        root_dir = lspconfig.util.root_pattern("Package.swift", ".git"),
+        settings = {
+                sourcekit = {
+                        indexing = {
+                                enabled = true,
+                        },
+                        diagnostics = {
+                                enabled = true,
+                        },
+                        completion = {
+                                enabled = true,
+                        },
+                },
+        },
+})
+
 -- format these files on save
 -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 --         pattern = {
