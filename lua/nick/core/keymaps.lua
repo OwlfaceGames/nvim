@@ -44,7 +44,7 @@ keymap.set('n', '<leader>ln', ':setlocal number relativenumber <CR>')
 keymap.set('n', '<leader>o', ':Oil<CR>')
 
 -- open exporer
-keymap.set('n', '<leader>e', ':ex .<CR>')
+keymap.set('n', '<leader>e', ':Neotree<CR>')
 
 -- quick list
 keymap.set('n', '<leader>qo', ':copen<CR>')
