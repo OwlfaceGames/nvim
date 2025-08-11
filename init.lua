@@ -249,7 +249,6 @@ lspconfig.solargraph.setup({
         },
 })
 
-
 -- Tailwind CSS
 lspconfig.tailwindcss.setup({
         settings = {
