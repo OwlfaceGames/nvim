@@ -330,3 +330,74 @@ vim.api.nvim_set_hl(0, 'CurSearch', { bg = '#ff1493', fg = '#ffffff' })
 
 -- Highlights text being replaced during substitute operations
 vim.api.nvim_set_hl(0, 'Substitute', { bg = '#8a2be2', fg = '#ffffff' })
+
+-- debug
+local dap = require('dap')
+
+-- Remove your old lldb configuration and replace with this:
+dap.adapters.codelldb = {
+        type = 'server',
+        port = "${port}",
+        executable = {
+                -- If installed via Mason:
+                command = vim.fn.stdpath("data") .. '/mason/bin/codelldb',
+
+                -- If installed via Homebrew, use this instead:
+                -- command = '/opt/homebrew/bin/codelldb',
+                -- or for Intel Macs:
+                -- command = '/usr/local/bin/codelldb',
+
+                args = {"--port", "${port}"},
+        }
+}
+
+dap.configurations.c = {
+        {
+                name = "Launch file",
+                type = "codelldb",  -- Changed from 'lldb' to 'codelldb'
+                request = "launch",
+                program = function()
+                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+                args = {},
+        },
+        {
+                name = "Attach to process",
+                type = "codelldb",
+                request = "attach",
+                pid = require('dap.utils').pick_process,
+                args = {},
+        }
+}
+
+
+-- Add this after your existing DAP configuration
+local dapui = require('dapui')
+
+-- Setup dapui
+dapui.setup()
+
+-- Also configure for C++ if you use it
+dap.configurations.cpp = dap.configurations.c
+
+-- Auto open/close dapui when debugging starts/stops
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
+
+-- Key mappings for debugging
+vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Start/Continue debugging" })
+vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Step over" })
+vim.keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = "Step into" })
+vim.keymap.set('n', '<F12>', function() require('dap').step_out() end, { desc = "Step out" })
+vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Toggle breakpoint" })
+vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { desc = "Open DAP REPL" })
+vim.keymap.set('n', '<Leader>du', function() require('dapui').toggle() end, { desc = "Toggle DAP UI" })
