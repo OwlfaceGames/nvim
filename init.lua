@@ -300,6 +300,13 @@ lspconfig.sourcekit.setup({
                         },
                 },
         },
+        on_attach = function(client, bufnr)
+                -- Set 8-space tabs for files handled by sourcekit-lsp
+                vim.bo[bufnr].tabstop = 8
+                vim.bo[bufnr].shiftwidth = 8
+                vim.bo[bufnr].softtabstop = 8
+                vim.bo[bufnr].expandtab = false  -- Use actual tabs (set to true for spaces)
+        end,
 })
 
 -- format these files on save
