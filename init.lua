@@ -331,7 +331,9 @@ vim.api.nvim_set_hl(0, 'CurSearch', { bg = '#ff1493', fg = '#ffffff' })
 -- Highlights text being replaced during substitute operations
 vim.api.nvim_set_hl(0, 'Substitute', { bg = '#8a2be2', fg = '#ffffff' })
 
--- debug
+---------------
+-- debugging --
+---------------
 local dap = require('dap')
 
 -- Remove your old lldb configuration and replace with this:
@@ -384,20 +386,13 @@ dap.configurations.cpp = dap.configurations.c
 
 -- Auto open/close dapui when debugging starts/stops
 dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
+        dapui.open()
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
+        dapui.close()
 end
 dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
+        dapui.close()
 end
 
--- Key mappings for debugging
-vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Start/Continue debugging" })
-vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Step over" })
-vim.keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = "Step into" })
-vim.keymap.set('n', '<F12>', function() require('dap').step_out() end, { desc = "Step out" })
-vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Toggle breakpoint" })
-vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { desc = "Open DAP REPL" })
-vim.keymap.set('n', '<Leader>du', function() require('dapui').toggle() end, { desc = "Toggle DAP UI" })
+

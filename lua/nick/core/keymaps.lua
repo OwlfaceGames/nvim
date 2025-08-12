@@ -56,3 +56,12 @@ keymap.set('n', '<leader>qp', ':cprevious<CR>')
 
 -- quit terminal mode
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
+-- Key mappings for debugging
+vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Start/Continue debugging" })
+vim.keymap.set('n', '<F1>', function() require('dap').step_over() end, { desc = "Step over" })
+vim.keymap.set('n', '<F2>', function() require('dap').step_into() end, { desc = "Step into" })
+vim.keymap.set('n', '<F3>', function() require('dap').step_out() end, { desc = "Step out" })
+vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Toggle breakpoint" })
+vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { desc = "Open DAP REPL" })
+vim.keymap.set('n', '<Leader>du', function() require('dapui').toggle() end, { desc = "Toggle DAP UI" })
