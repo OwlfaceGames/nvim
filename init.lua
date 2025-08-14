@@ -381,6 +381,20 @@ dap.configurations.c = {
         }
 }
 
+dap.configurations.swift = {
+  {
+    type = "codelldb",
+    request = "launch",
+    name = "Launch Swift",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+    args = {},
+  },
+}
+
 
 -- Add this after your existing DAP configuration
 local dapui = require('dapui')
