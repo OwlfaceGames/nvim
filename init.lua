@@ -373,13 +373,7 @@ dap.configurations.c = {
 }
 
 -- go debugging
-require('dap-go').setup({
-        delve = {
-                args = {"--check-go-version=false"},
-                initialize_timeout_sec = 20,
-                port = "${port}",
-        },
-})
+require('dap-go').setup()
 
 dap.configurations.go = {
         {
