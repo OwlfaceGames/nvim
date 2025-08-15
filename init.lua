@@ -372,6 +372,9 @@ dap.configurations.c = {
         }
 }
 
+-- do debugging
+require('dap-go').setup()
+
 -- Add this after your existing DAP configuration
 local dapui = require('dapui')
 
