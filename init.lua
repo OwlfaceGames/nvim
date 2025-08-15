@@ -65,7 +65,6 @@ vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end)
 vim.keymap.set("n", "<leader>hn", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<leader>hp", function() harpoon:list():next() end)
 
-
 -------------------------------------
 -- use telescope as ui for harpoon --
 -------------------------------------
@@ -96,7 +95,7 @@ end
 -- open harpoon keymap --
 -------------------------
 vim.keymap.set("n", "<leader>ht", function() toggle_telescope(harpoon:list()) end,
-        { desc = "Open harpoon window" })
+{ desc = "Open harpoon window" })
 
 -- oil
 require("oil").setup()
@@ -311,16 +310,16 @@ lspconfig.sourcekit.setup({
 
 -- format these files on save
 -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---         pattern = {
---                 "*.c", "*.h", "*.cpp", "*.hpp", "*.lua", "*.json",
---                 "*.py", "*.ts", "*.js", "*.jsx", "*.tsx",
---                 "*.rs", "*.go", "*.html", "*.css"
---         },
---         desc = "formats code on save with lsp",
---         callback = function()
---                 vim.lsp.buf.format()
---         end,
--- })
+        --         pattern = {
+                --                 "*.c", "*.h", "*.cpp", "*.hpp", "*.lua", "*.json",
+                --                 "*.py", "*.ts", "*.js", "*.jsx", "*.tsx",
+                --                 "*.rs", "*.go", "*.html", "*.css"
+                --         },
+                --         desc = "formats code on save with lsp",
+                --         callback = function()
+                        --                 vim.lsp.buf.format()
+                        --         end,
+                        -- })
 
 -- Inverted selection highlighting
 vim.api.nvim_set_hl(0, 'Visual', { bg = '#071afb' })
@@ -382,19 +381,18 @@ dap.configurations.c = {
 }
 
 dap.configurations.swift = {
-  {
-    type = "codelldb",
-    request = "launch",
-    name = "Launch Swift",
-    program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    end,
-    cwd = '${workspaceFolder}',
-    stopOnEntry = false,
-    args = {},
-  },
+        {
+                type = "codelldb",
+                request = "launch",
+                name = "Launch Swift",
+                program = function()
+                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+                args = {},
+        },
 }
-
 
 -- Add this after your existing DAP configuration
 local dapui = require('dapui')
@@ -409,11 +407,12 @@ dap.configurations.cpp = dap.configurations.c
 dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
 end
+
 dap.listeners.before.event_terminated["dapui_config"] = function()
         dapui.close()
 end
+
 dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
 end
-
 
