@@ -175,9 +175,7 @@ lspconfig.ts_ls.setup({
 lspconfig.rust_analyzer.setup({
         settings = {
                 ['rust-analyzer'] = {
-                        checkOnSave = {
-                                command = "clippy",
-                        },
+                        checkOnSave = true,
                         diagnostics = {
                                 enable = true,
                                 experimental = {
@@ -390,6 +388,20 @@ dap.configurations.go = {
                 program = "${fileDirname}",
                 showGlobalVariables = true,
         }
+}
+
+-- Rust debugging (minimal)
+dap.configurations.rust = {
+    {
+        name = "Debug Rust",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+    }
 }
 
 local dapui = require('dapui')
