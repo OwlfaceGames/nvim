@@ -372,16 +372,36 @@ dap.configurations.c = {
         }
 }
 
--- do debugging
-require('dap-go').setup()
+-- go debugging
+require('dap-go').setup({
+        delve = {
+                args = {"--check-go-version=false"},
+                initialize_timeout_sec = 20,
+                port = "${port}",
+        },
+})
 
--- Add this after your existing DAP configuration
+dap.configurations.go = {
+        {
+                type = "go",
+                name = "Debug",
+                request = "launch",
+                program = "${file}",
+                showGlobalVariables = true,
+        },
+        {
+                type = "go",
+                name = "Debug Package",
+                request = "launch",
+                program = "${fileDirname}",
+                showGlobalVariables = true,
+        }
+}
+
 local dapui = require('dapui')
 
--- Setup dapui
 dapui.setup()
 
--- Also configure for C++ if you use it
 dap.configurations.cpp = dap.configurations.c
 
 -- Auto open/close dapui when debugging starts/stops
