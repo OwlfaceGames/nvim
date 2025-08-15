@@ -342,19 +342,11 @@ vim.api.nvim_set_hl(0, 'Substitute', { bg = '#8a2be2', fg = '#ffffff' })
 ---------------
 local dap = require('dap')
 
--- Remove your old lldb configuration and replace with this:
 dap.adapters.codelldb = {
         type = 'server',
         port = "${port}",
         executable = {
-                -- If installed via Mason:
                 command = vim.fn.stdpath("data") .. '/mason/bin/codelldb',
-
-                -- If installed via Homebrew, use this instead:
-                -- command = '/opt/homebrew/bin/codelldb',
-                -- or for Intel Macs:
-                -- command = '/usr/local/bin/codelldb',
-
                 args = {"--port", "${port}"},
         }
 }
@@ -362,7 +354,7 @@ dap.adapters.codelldb = {
 dap.configurations.c = {
         {
                 name = "Launch file",
-                type = "codelldb",  -- Changed from 'lldb' to 'codelldb'
+                type = "codelldb",
                 request = "launch",
                 program = function()
                         return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
@@ -378,20 +370,6 @@ dap.configurations.c = {
                 pid = require('dap.utils').pick_process,
                 args = {},
         }
-}
-
-dap.configurations.swift = {
-        {
-                type = "codelldb",
-                request = "launch",
-                name = "Launch Swift",
-                program = function()
-                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-                end,
-                cwd = '${workspaceFolder}',
-                stopOnEntry = false,
-                args = {},
-        },
 }
 
 -- Add this after your existing DAP configuration
