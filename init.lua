@@ -392,16 +392,62 @@ dap.configurations.go = {
 
 -- Rust debugging (minimal)
 dap.configurations.rust = {
-    {
-        name = "Debug Rust",
-        type = "codelldb",
-        request = "launch",
-        program = function()
-            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
-        end,
-        cwd = '${workspaceFolder}',
-        stopOnEntry = false,
-    }
+        {
+                name = "Debug Rust",
+                type = "codelldb",
+                request = "launch",
+                program = function()
+                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+        }
+}
+
+-- Configure lldb-dap adapter
+require('dap').adapters.lldb = {
+        type = 'executable',
+        command = '/Library/Developer/CommandLineTools/usr/bin/lldb-dap',
+        name = 'lldb'
+}
+
+
+require('dap').configurations.swift = {
+        {
+                name = 'Launch Swift with Full Debug',
+                type = 'lldb',
+                request = 'launch',
+                program = function()
+                        local file = vim.fn.expand('%:p')
+                        local executable = vim.fn.expand('%:p:r')
+                        -- Compile with maximum debug info
+                        local cmd = string.format(
+                                'swiftc -g -Onone -debug-info-format=dwarf "%s" -o "%s"',
+                                file, executable
+                        )
+                        print("Compile command: " .. cmd)
+                        local result = vim.fn.system(cmd)
+                        if vim.v.shell_error ~= 0 then
+                                print("Compile error: " .. result)
+                        end
+                        return executable
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+                args = {},
+                sourceLanguages = { 'swift' },
+                -- More comprehensive LLDB setup
+                initCommands = {
+                        'settings set target.language swift',
+                        'settings set target.prefer-dynamic-value run-target',
+                        'settings set target.enable-synthetic-value true',
+                        'settings set symbols.enable-external-lookup true',
+                        'command script import lldb.formatters.swift',
+                },
+                preRunCommands = {
+                        'breakpoint set --file ' .. vim.fn.expand('%:t') .. ' --line ' .. vim.fn.line('.'),
+                },
+        },
 }
 
 local dapui = require('dapui')
