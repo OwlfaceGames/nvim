@@ -62,10 +62,16 @@ keymap.set('n', '<leader>t', ':TermExec cmd="tsk"<CR>')
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- Key mappings for debugging
-vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Start/Continue debugging" })
-vim.keymap.set('n', '<F1>', function() require('dap').step_over() end, { desc = "Step over" })
-vim.keymap.set('n', '<F2>', function() require('dap').step_into() end, { desc = "Step into" })
-vim.keymap.set('n', '<F3>', function() require('dap').step_out() end, { desc = "Step out" })
-vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Toggle breakpoint" })
-vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { desc = "Open DAP REPL" })
-vim.keymap.set('n', '<Leader>du', function() require('dapui').toggle() end, { desc = "Toggle DAP UI" })
+keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Start/Continue debugging" })
+keymap.set('n', '<F1>', function() require('dap').step_over() end, { desc = "Step over" })
+keymap.set('n', '<F2>', function() require('dap').step_into() end, { desc = "Step into" })
+keymap.set('n', '<F3>', function() require('dap').step_out() end, { desc = "Step out" })
+keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Toggle breakpoint" })
+keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { desc = "Open DAP REPL" })
+keymap.set('n', '<Leader>du', function() require('dapui').toggle() end, { desc = "Toggle DAP UI" })
+
+-- Resize vim window
+keymap.set('n', '<leader>k', ':resize -2<CR>', { silent = true })
+keymap.set('n', '<leader>j', ':resize +2<CR>', { silent = true })
+keymap.set('n', '<leader>h', ':vertical resize -2<CR>', { silent = true })
+keymap.set('n', '<leader>l', ':vertical resize +2<CR>', { silent = true })
