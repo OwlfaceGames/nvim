@@ -7,4 +7,5 @@ return {
 	"norcalli/nvim-colorizer.lua",
 	"savq/melange-nvim",
         "mbbill/undotree",
+        "RostislavArts/naysayer.nvim",
 }
