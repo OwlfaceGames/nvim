@@ -10,7 +10,7 @@
                 "description": "comment block"
         },
         "line comment": {
-                "prefix": "col",
+                "prefix": "cobl",
                 "body": [
                         "/* ${1:TEXT} *****************************************************************/",
                         "$0"
