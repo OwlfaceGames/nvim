@@ -309,6 +309,10 @@ vim.lsp.config('sourcekit', {
 })
 vim.lsp.enable('sourcekit')
 
+-- Odin
+vim.lsp.config('ols', {})
+vim.lsp.enable('ols')
+
 -- format these files on save
 -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         --         pattern = {

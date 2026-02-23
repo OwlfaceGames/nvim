@@ -15,6 +15,7 @@ return {
 					"gopls",
 					"html",
 					"cssls",
+                                        "ols",
 				},
 				automatic_installation = true,
 			})
