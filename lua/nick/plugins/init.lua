@@ -8,4 +8,5 @@ return {
 	"savq/melange-nvim",
         "mbbill/undotree",
         "RostislavArts/naysayer.nvim",
+        "OwlfaceGames/owl-naysayer.nvim",
 }
