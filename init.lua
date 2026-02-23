@@ -457,6 +457,51 @@ require('dap').configurations.swift = {
         },
 }
 
+-- Odin debugging (via codelldb)
+dap.configurations.odin = {
+    {
+        name = "Launch Odin Program",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+            -- Compile with debug symbols first
+            local file = vim.fn.expand('%:p')
+            local out = vim.fn.expand('%:p:r')
+            local cmd = string.format('odin build "%s" -file -debug -out:"%s"', file, out)
+            print("Compiling: " .. cmd)
+            local result = vim.fn.system(cmd)
+            if vim.v.shell_error ~= 0 then
+                print("Compile error: " .. result)
+                return nil
+            end
+            return out
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = {},
+    },
+    {
+        name = "Launch Odin Package",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+            local cwd = vim.fn.getcwd()
+            local out = cwd .. '/debug_out'
+            local cmd = string.format('odin build "%s" -debug -out:"%s"', cwd, out)
+            print("Compiling: " .. cmd)
+            local result = vim.fn.system(cmd)
+            if vim.v.shell_error ~= 0 then
+                print("Compile error: " .. result)
+                return nil
+            end
+            return out
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = {},
+    },
+}
+
 local dapui = require('dapui')
 
 dapui.setup()
