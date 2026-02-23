@@ -109,14 +109,12 @@ require 'colorizer'.setup()
 -- LSPs --
 ----------
 
--- LSP Configurations
-local lspconfig = require('lspconfig')
-
 -- C/C++ (clangd)
-lspconfig.clangd.setup {}
+vim.lsp.config('clangd', {})
+vim.lsp.enable('clangd')
 
 -- Lua
-lspconfig.lua_ls.setup({
+vim.lsp.config('lua_ls', {
         settings = {
                 Lua = {
                         runtime = { version = 'LuaJIT' },
@@ -129,9 +127,10 @@ lspconfig.lua_ls.setup({
                 },
         },
 })
+vim.lsp.enable('lua_ls')
 
 -- Python (pyright)
-lspconfig.pyright.setup({
+vim.lsp.config('pyright', {
         settings = {
                 python = {
                         analysis = {
@@ -142,9 +141,10 @@ lspconfig.pyright.setup({
                 },
         },
 })
+vim.lsp.enable('pyright')
 
 -- TypeScript/JavaScript
-lspconfig.ts_ls.setup({
+vim.lsp.config('ts_ls', {
         settings = {
                 typescript = {
                         inlayHints = {
@@ -170,9 +170,10 @@ lspconfig.ts_ls.setup({
                 },
         },
 })
+vim.lsp.enable('ts_ls')
 
 -- Rust
-lspconfig.rust_analyzer.setup({
+vim.lsp.config('rust_analyzer', {
         settings = {
                 ['rust-analyzer'] = {
                         checkOnSave = true,
@@ -185,9 +186,10 @@ lspconfig.rust_analyzer.setup({
                 },
         },
 })
+vim.lsp.enable('rust_analyzer')
 
 -- Go
-lspconfig.gopls.setup({
+vim.lsp.config('gopls', {
         settings = {
                 gopls = {
                         analyses = {
@@ -198,9 +200,10 @@ lspconfig.gopls.setup({
                 },
         },
 })
+vim.lsp.enable('gopls')
 
 -- HTML
-lspconfig.html.setup({
+vim.lsp.config('html', {
         settings = {
                 html = {
                         format = {
@@ -211,9 +214,10 @@ lspconfig.html.setup({
                 },
         },
 })
+vim.lsp.enable('html')
 
 -- CSS
-lspconfig.cssls.setup({
+vim.lsp.config('cssls', {
         settings = {
                 css = {
                         validate = true,
@@ -223,9 +227,10 @@ lspconfig.cssls.setup({
                 },
         },
 })
+vim.lsp.enable('cssls')
 
 -- JSON
-lspconfig.jsonls.setup({
+vim.lsp.config('jsonls', {
         settings = {
                 json = {
                         schemas = require('schemastore').json.schemas(),
@@ -233,9 +238,10 @@ lspconfig.jsonls.setup({
                 },
         },
 })
+vim.lsp.enable('jsonls')
 
 -- Ruby (solargraph)
-lspconfig.solargraph.setup({
+vim.lsp.config('solargraph', {
         settings = {
                 solargraph = {
                         diagnostics = true,
@@ -245,9 +251,10 @@ lspconfig.solargraph.setup({
                 },
         },
 })
+vim.lsp.enable('solargraph')
 
 -- Tailwind CSS
-lspconfig.tailwindcss.setup({
+vim.lsp.config('tailwindcss', {
         settings = {
                 tailwindCSS = {
                         classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
@@ -264,9 +271,10 @@ lspconfig.tailwindcss.setup({
         },
         filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "erb" },
 })
+vim.lsp.enable('tailwindcss')
 
 -- Vue
-lspconfig.volar.setup({
+vim.lsp.config('volar', {
         settings = {
                 vue = {
                         inlayHints = {
@@ -278,33 +286,28 @@ lspconfig.volar.setup({
         },
         filetypes = { "vue" },
 })
+vim.lsp.enable('volar')
 
 -- Swift (sourcekit-lsp)
-lspconfig.sourcekit.setup({
+vim.lsp.config('sourcekit', {
         cmd = { "sourcekit-lsp" },
         filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp" },
-        root_dir = lspconfig.util.root_pattern("Package.swift", ".git"),
+        root_markers = { "Package.swift", ".git" },
         settings = {
                 sourcekit = {
-                        indexing = {
-                                enabled = true,
-                        },
-                        diagnostics = {
-                                enabled = true,
-                        },
-                        completion = {
-                                enabled = true,
-                        },
+                        indexing = { enabled = true },
+                        diagnostics = { enabled = true },
+                        completion = { enabled = true },
                 },
         },
         on_attach = function(client, bufnr)
-                -- Set 8-space tabs for files handled by sourcekit-lsp
                 vim.bo[bufnr].tabstop = 8
                 vim.bo[bufnr].shiftwidth = 8
                 vim.bo[bufnr].softtabstop = 8
-                vim.bo[bufnr].expandtab = false  -- Use actual tabs (set to true for spaces)
+                vim.bo[bufnr].expandtab = false
         end,
 })
+vim.lsp.enable('sourcekit')
 
 -- format these files on save
 -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
