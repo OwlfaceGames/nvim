@@ -9,4 +9,5 @@ return {
         "mbbill/undotree",
         "RostislavArts/naysayer.nvim",
         "OwlfaceGames/owl-naysayer.nvim",
+        "OwlfaceGames/owly.nvim",
 }
