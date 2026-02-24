@@ -39,6 +39,7 @@ keymap.set("n", "<leader>nn", "<cmd>NoNeckPain<CR>", { desc = "Toggle no neck pa
 -- line numbers
 keymap.set('n', '<leader>nln', ':setlocal nonumber norelativenumber <CR>')
 keymap.set('n', '<leader>ln', ':setlocal number relativenumber <CR>')
+keymap.set('n', '<leader>lnn', ':setlocal number norelativenumber <CR>')
 
 -- oil
 keymap.set('n', '<leader>o', ':Oil<CR>')
