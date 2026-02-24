@@ -5,7 +5,7 @@ return {
     require("issue_from_comment").setup({
       github_owner = "OwlfaceGames",
       github_repo = "earthen_heart",
-      default_labels = { "focus" },
+      default_labels = { "" },
       create_key = '<Leader>gc', -- Custom key to create the issue
       cancel_key = 'q',          -- Custom key to cancel
     })
