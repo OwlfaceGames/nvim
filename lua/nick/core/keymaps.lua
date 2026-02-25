@@ -76,3 +76,7 @@ keymap.set('n', '<leader>k', ':resize -2<CR>', { silent = true })
 keymap.set('n', '<leader>j', ':resize +2<CR>', { silent = true })
 keymap.set('n', '<leader>h', ':vertical resize -2<CR>', { silent = true })
 keymap.set('n', '<leader>l', ':vertical resize +2<CR>', { silent = true })
+
+-- set color column
+keymap.set('n', '<leader>lc', ':set colorcolumn=80<CR>', { silent = true })
+keymap.set('n', '<leader>nlc', ':set colorcolumn=<CR>', { silent = true })
