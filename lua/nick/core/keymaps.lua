@@ -57,7 +57,7 @@ keymap.set('n', '<leader>qp', ':cprevious<CR>')
 
 -- new floating terminal
 keymap.set('n', '<leader>tt', ':ToggleTerm<CR>')
-keymap.set('n', '<leader>t', ':TermExec cmd="tsk"<CR>')
+keymap.set('n', '<leader>t', ':TermExec cmd="tsk -q"<CR>')
 
 -- quit terminal mode
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
