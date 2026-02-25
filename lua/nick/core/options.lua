@@ -46,5 +46,5 @@ opt.iskeyword:append("_")
 opt["guicursor"] = ""
 
 -- add column to warn when code is getting too long
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 
