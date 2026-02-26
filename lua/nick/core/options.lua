@@ -8,7 +8,7 @@ vim.keymap.set('v', 'P', 'p', { noremap = true })
 
 local opt = vim.opt       -- set local var for vim opt
 
-opt.relativenumber = false -- set line numbers
+opt.relativenumber = true -- set line numbers
 opt.number = true
 
 opt.wrap = false
