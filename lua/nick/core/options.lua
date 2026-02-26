@@ -1,9 +1,4 @@
------------------
--- vim options --
------------------
-
-
-local opt = vim.opt       -- set local var for vim opt
+local opt = vim.opt -- set local var for vim opt
 
 opt.relativenumber = true -- set line numbers
 opt.number = true
