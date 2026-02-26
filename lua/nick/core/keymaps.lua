@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- swap p and shift p binds for visual mode for normal paste over functionality
+keymap.set('v', 'p', 'P', { noremap = true })
+keymap.set('v', 'P', 'p', { noremap = true })
+
 -- Map gd to LSP definition
 keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = true, silent = true })
 
@@ -20,18 +24,10 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 
--- tabs
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to prev tab" })
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
-
 -- telescope keybinds
 keymap.set('n', '<leader>ff', "<cmd>Telescope find_files<CR>", { desc = 'Telescope find files' })
 keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<CR>", { desc = 'Telescope live grep' })
 keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<CR>", { desc = 'Telescope buffers' })
-keymap.set('n', '<leader>fh', "<cmd>Telescope help_tags<CR>", { desc = 'Telescope help tags' })
 
 -- no neck pain
 keymap.set("n", "<leader>nn", "<cmd>NoNeckPain<CR>", { desc = "Toggle no neck pain" })
@@ -57,7 +53,7 @@ keymap.set('n', '<leader>qp', ':cprevious<CR>')
 
 -- new floating terminal
 keymap.set('n', '<leader>tt', ':ToggleTerm<CR>')
-keymap.set('n', '<leader>t', ':TermExec cmd="tsk -q"<CR>')
+keymap.set('n', '<leader>t', ':TermExec cmd="tsk -q"<CR>') -- run tasker
 
 -- quit terminal mode
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
