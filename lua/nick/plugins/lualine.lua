@@ -9,14 +9,13 @@ return {
         -- configure lualine with modified theme
         lualine.setup({
             options = {
-                theme = "tomorrow_night",
+                theme = "auto",
             },
             sections = {
                 lualine_x = {
                     {
                         lazy_status.updates,
                         cond = lazy_status.has_updates,
-                        -- color = { fg = "#ff9e64" },
                     },
                     { "encoding" },
                     { "fileformat" },
