@@ -45,6 +45,9 @@ opt.iskeyword:append("_")
 -- thick cursor
 opt["guicursor"] = ""
 
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 
-opt.cursorline = true
+-- opt.cursorline = true
+
+-- make terminal title show file name
+opt.title = true

@@ -80,3 +80,7 @@ keymap.set('n', '<leader>l', ':vertical resize +2<CR>', { silent = true })
 -- set color column
 keymap.set('n', '<leader>lc', ':set colorcolumn=80<CR>', { silent = true })
 keymap.set('n', '<leader>nlc', ':set colorcolumn=<CR>', { silent = true })
+
+-- set winbar
+keymap.set('n', '<leader>wb', ':set winbar=%f<CR>', { silent = true })
+keymap.set('n', '<leader>nwb', ':set winbar=<CR>', { silent = true })
