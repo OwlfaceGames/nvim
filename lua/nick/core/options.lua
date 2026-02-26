@@ -17,8 +17,8 @@ opt.wrap = false
 vim.keymap.set('n', 'J', '<Nop>', { noremap = true })
 
 -- tabs & indentation
-opt.tabstop = 8       -- 8 spaces for tabs
-opt.shiftwidth = 8    -- 8 spaces for indent width
+opt.tabstop = 4       -- 8 spaces for tabs
+opt.shiftwidth = 4    -- 8 spaces for indent width
 opt.expandtab = true  -- expand tab spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
@@ -45,12 +45,14 @@ opt.iskeyword:append("_")
 -- thick cursor
 -- opt["guicursor"] = ""
 
--- opt.colorcolumn = "80"
+-- turn on color column
+opt.colorcolumn = "80"
 
+-- cursorline
 -- opt.cursorline = true
 
 -- make terminal title show file name
 opt.title = true
 
-
+-- turn on inline diagnostics
 vim.diagnostic.config({ virtual_text = true })
