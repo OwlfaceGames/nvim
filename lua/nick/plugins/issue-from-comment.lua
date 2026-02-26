@@ -1,4 +1,3 @@
--- In your plugins configuration
 return {
     "OwlfaceGames/issue-from-comment.nvim",
     config = function()

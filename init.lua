@@ -41,9 +41,7 @@ vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end)
 vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end)
 
------------------------------------------------
--- basic telescope configuration for harpoon --
------------------------------------------------
+-- basic telescope configuration for harpoon
 local conf = require("telescope.config").values
 local function toggle_telescope(harpoon_files)
     local file_paths = {}
@@ -61,23 +59,15 @@ local function toggle_telescope(harpoon_files)
     }):find()
 end
 
--------------------------
--- open harpoon keymap --
--------------------------
+-- open harpoon keymap
 vim.keymap.set("n", "<leader>ht", function() toggle_telescope(harpoon:list()) end,
 { desc = "Open harpoon window" })
 
 -- oil
 require("oil").setup()
 
-------------------------------------------
--- require colorizer to color hex codes --
-------------------------------------------
+-- require colorizer to color hex codes
 require 'colorizer'.setup()
-
-----------
--- LSPs --
-----------
 
 -- C/C++ (clangd)
 vim.lsp.config('clangd', {})
@@ -283,9 +273,7 @@ vim.lsp.enable('sourcekit')
 vim.lsp.config('ols', {})
 vim.lsp.enable('ols')
 
----------------
--- debugging --
----------------
+-- debugging
 local dap = require('dap')
 
 dap.adapters.codelldb = {
@@ -359,7 +347,7 @@ require('dap').adapters.lldb = {
     name = 'lldb'
 }
 
-
+-- swift
 require('dap').configurations.swift = {
     {
         name = 'Launch Swift with Full Debug',
@@ -444,9 +432,7 @@ dap.configurations.odin = {
 }
 
 local dapui = require('dapui')
-
 dapui.setup()
-
 dap.configurations.cpp = dap.configurations.c
 
 -- Auto open/close dapui when debugging starts/stops
