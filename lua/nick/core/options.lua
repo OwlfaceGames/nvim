@@ -46,3 +46,5 @@ opt.iskeyword:append("_")
 opt["guicursor"] = ""
 
 opt.colorcolumn = "80"
+
+opt.cursorline = true
