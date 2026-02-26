@@ -43,7 +43,7 @@ opt.iskeyword:append("-")
 opt.iskeyword:append("_")
 
 -- thick cursor
-opt["guicursor"] = ""
+-- opt["guicursor"] = ""
 
 -- opt.colorcolumn = "80"
 
@@ -51,3 +51,6 @@ opt["guicursor"] = ""
 
 -- make terminal title show file name
 opt.title = true
+
+
+vim.diagnostic.config({ virtual_text = true })
