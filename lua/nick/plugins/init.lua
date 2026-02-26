@@ -10,4 +10,6 @@ return {
         "RostislavArts/naysayer.nvim",
         "OwlfaceGames/owl-naysayer.nvim",
         "OwlfaceGames/owly.nvim",
+        "danilamihailov/beacon.nvim",
+        "nvim-mini/mini.cursorword",
 }

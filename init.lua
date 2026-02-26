@@ -521,3 +521,6 @@ dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
 end
 
+vim.api.nvim_set_hl(0, 'Beacon', { bg = '#84de8b' })
+
+require('mini.cursorword').setup()
