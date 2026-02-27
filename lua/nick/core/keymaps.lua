@@ -81,4 +81,7 @@ keymap.set('n', '<leader>nlc', ':set colorcolumn=<CR>', { silent = true })
 keymap.set('n', '<leader>wb', ':set winbar=%f<CR>', { silent = true })
 keymap.set('n', '<leader>nwb', ':set winbar=<CR>', { silent = true })
 
-
+-- open starter
+keymap.set("n", "<leader>s", function()
+    require("mini.starter").open()
+end, { desc = "Open Mini Starter" })
