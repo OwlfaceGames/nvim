@@ -41,7 +41,7 @@ opt.iskeyword:append("_")
 opt.colorcolumn = "80"
 
 -- cursorline
--- opt.cursorline = true
+opt.cursorline = true
 
 -- make terminal title show file name
 opt.title = true
