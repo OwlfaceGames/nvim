@@ -41,6 +41,7 @@ return {
                     { action = 'Telescope live_grep', name = 'S: Search', section = '' },
                     { action = 'Telescope find_files', name = 'F: Find Files', section = '' },
                     { action = "Oil", name = "O: File Manager", section = "" },
+                    { action = "LazyGit", name = "G: Git", section = "" },
                     { action = 'qall!', name = 'Q: Quit', section = '' },
                 },
                 footer = vim.fn.fnamemodify(vim.fn.getcwd(), ":~"),
