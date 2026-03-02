@@ -19,7 +19,7 @@ return {
 ⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀
 ⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀]],
                 items = {
-                    { action = 'TodoTelescope', name = 'T: Todos', section = '' },
+                    { action = 'TodoTelescope', name = 'T: Todos', section = 'Shortcuts' },
                     {
                         name = "H: Harpoon",
                         action = function()
@@ -36,13 +36,14 @@ return {
                                 sorter = conf.generic_sorter({}),
                             }):find()
                         end,
-                        section = "",
+                        section = "Shortcuts",
                     },
-                    { action = 'Telescope live_grep', name = 'S: Search', section = '' },
-                    { action = 'Telescope find_files', name = 'F: Find Files', section = '' },
-                    { action = "Oil", name = "O: File Manager", section = "" },
-                    { action = "LazyGit", name = "G: Git", section = "" },
-                    { action = 'qall!', name = 'Q: Quit', section = '' },
+                    { action = 'Telescope live_grep', name = 'S: Search', section = 'Shortcuts' },
+                    { action = 'Telescope find_files', name = 'F: Find Files', section = 'Shortcuts' },
+                    { action = "Oil", name = "O: File Manager", section = "Shortcuts" },
+                    { action = "LazyGit", name = "G: Git", section = "Shortcuts" },
+                    { action = 'qall!', name = 'Q: Quit', section = 'Shortcuts' },
+                    starter.sections.recent_files(4, false, false),
                 },
                 footer = vim.fn.fnamemodify(vim.fn.getcwd(), ":~"),
                 content_hooks = {
