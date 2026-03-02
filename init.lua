@@ -5,6 +5,9 @@ require("nick.lazy")
 -- set colorscheme
 vim.cmd.colorscheme('owly')
 
+-- set becon color
+vim.api.nvim_set_hl(0, 'Beacon', { bg = '#ffffff' })
+
 -- tree sitter
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
