@@ -42,6 +42,17 @@ return {
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },
             -- default = { 'path', 'snippets' }, -- non intrusive
+            providers = {
+                path = {
+                    name = 'Path',
+                    module = 'blink.cmp.sources.path',
+                    opts = {
+                        get_cwd = function()
+                            return vim.fn.getcwd()
+                        end,
+                    },
+                },
+            },
         },
 
         -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
