@@ -268,7 +268,7 @@ vim.lsp.config('sourcekit', {
             completion = { enabled = true },
         },
     },
-    on_attach = function(bufnr)
+    on_attach = function(client, bufnr)
         vim.bo[bufnr].tabstop = 8
         vim.bo[bufnr].shiftwidth = 8
         vim.bo[bufnr].softtabstop = 8
