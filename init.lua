@@ -5,6 +5,9 @@ require("nick.lazy")
 -- set colorscheme
 vim.cmd.colorscheme('owly')
 
+-- make background black
+vim.cmd("highlight Normal guibg=#000000")
+
 -- set becon color
 vim.api.nvim_set_hl(0, 'Beacon', { bg = '#ffffff' })
 
