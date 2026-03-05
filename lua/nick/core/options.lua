@@ -36,7 +36,7 @@ opt.iskeyword:append("_")
 
 -- thick cursor
 -- opt["guicursor"] = ""
-vim.opt.guicursor = "a:block-blinkwait700-blinkoff400-blinkon250"
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250"
 
 -- turn on color column
 opt.colorcolumn = "80"
