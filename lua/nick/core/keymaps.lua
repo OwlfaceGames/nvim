@@ -91,3 +91,6 @@ end, { desc = "Open Mini Starter" })
 
 -- prevent s remaps
 vim.keymap.set('n', 's', 's', { noremap = true })
+
+-- make control z do nothing
+vim.keymap.set({'n', 'i', 'v'}, '<C-z>', '<Nop>', { noremap = true, silent = true })
