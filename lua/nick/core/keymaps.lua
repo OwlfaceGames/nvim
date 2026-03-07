@@ -88,3 +88,6 @@ keymap.set('n', '<leader>nwb', ':set winbar=<CR>', { silent = true })
 keymap.set("n", "<leader>s", function()
     require("mini.starter").open()
 end, { desc = "Open Mini Starter" })
+
+-- prevent s remaps
+vim.keymap.set('n', 's', 's', { noremap = true })
