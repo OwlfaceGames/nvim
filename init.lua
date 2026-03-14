@@ -15,8 +15,8 @@ vim.api.nvim_set_hl(0, 'Beacon', { bg = '#ffffff' })
 vim.api.nvim_set_hl(0, "MatchParen", { bg = "#ff1493", fg = "#ffffff", bold = true })
 
 -- Inverted selection highlighting
-vim.api.nvim_set_hl(0, 'Visual', { bg = '#071afb' })
-vim.api.nvim_set_hl(0, 'VisualNOS', { bg = '#071afb' })
+-- vim.api.nvim_set_hl(0, 'Visual', { bg = '#071afb' })
+-- vim.api.nvim_set_hl(0, 'VisualNOS', { bg = '#071afb' })
 
 -- Highlights the current match as you type
 vim.api.nvim_set_hl(0, 'IncSearch', { bg = '#ff6600', fg = '#ffffff' })
