@@ -54,8 +54,7 @@ keymap.set('n', '<leader>qp', ':cprevious<CR>')
 keymap.set('n', '<leader>qt', ':TodoQuickFix<CR>')
 
 -- new floating terminal
-keymap.set('n', '<leader>tt', ':ToggleTerm<CR>')
-keymap.set('n', '<leader>t', ':TermExec cmd="tsk -q"<CR>') -- run tasker
+keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
 
 -- quit terminal mode
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
