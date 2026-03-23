@@ -49,8 +49,8 @@ keymap.set('n', '<leader>n', ':NeoCodeium toggle<CR>')
 
 -- quick list
 keymap.set('n', '<leader>qo', ':copen<CR>')
-keymap.set('n', '<leader>qn', ':cNext<CR>')
-keymap.set('n', '<leader>qp', ':cprevious<CR>')
+keymap.set('n', '<leader>qn', ':cnext<CR>')
+keymap.set('n', '<leader>qp', ':cprev<CR>')
 keymap.set('n', '<leader>qt', ':TodoQuickFix<CR>')
 
 -- new floating terminal
