@@ -6,7 +6,7 @@ require("nick.lazy")
 vim.cmd.colorscheme('owly')
 
 -- set becon color
-vim.api.nvim_set_hl(0, 'Beacon', { bg = '#ffffff' })
+vim.api.nvim_set_hl(0, 'Beacon', { bg = '#84de8b' })
 
 -- tree sitter
 require 'nvim-treesitter.configs'.setup {

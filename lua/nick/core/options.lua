@@ -35,15 +35,15 @@ opt.iskeyword:append("-")
 opt.iskeyword:append("_")
 
 -- thick cursor
--- opt["guicursor"] = ""
-opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250" -- flashing default cursors
+opt["guicursor"] = ""
+-- opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250" -- flashing default cursors
 -- opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:block,o:block,a:blinkwait700-blinkoff400-blinkon250" -- flahsing block
 
 -- turn on color column
 opt.colorcolumn = "80"
 
 -- cursorline
-opt.cursorline = true
+-- opt.cursorline = true
 
 -- make terminal title show file name
 opt.title = true
