@@ -93,3 +93,7 @@ vim.keymap.set('n', 's', 's', { noremap = true })
 
 -- make control z do nothing
 vim.keymap.set({'n', 'i', 'v'}, '<C-z>', '<Nop>', { noremap = true, silent = true })
+
+-- open undo tre
+keymap.set("n", "<leader>uu", ":UndotreeToggle<CR>")
+keymap.set("n", "<leader>uf", ":UndotreeFocus<CR>")
