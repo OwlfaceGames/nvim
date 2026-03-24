@@ -114,3 +114,7 @@ keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 -- make control d and u stay centered
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- make navigating search terms start centered
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
