@@ -106,3 +106,7 @@ vim.keymap.set({'n', 'i', 'v'}, '<C-z>', '<Nop>', { noremap = true, silent = tru
 -- open undo tree
 keymap.set("n", "<leader>uu", ":UndotreeToggle<CR>", {desc = "open undo tree"})
 keymap.set("n", "<leader>uf", ":UndotreeFocus<CR>", {desc = "focus undo tree"})
+
+-- AMAZING move keybinds!!!
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '>-2<CR>gv=gv")
