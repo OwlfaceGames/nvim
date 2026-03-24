@@ -12,7 +12,14 @@ vim.keymap.set('n', 'J', '<Nop>', { noremap = true })
 opt.tabstop = 4       -- 8 spaces for tabs
 opt.shiftwidth = 4    -- 8 spaces for indent width
 opt.expandtab = true  -- expand tab spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+opt.smartindent = true
+
+-- stop annoying backups
+opt.swapfile = false
+opt.backup = false
+
+-- improve scrolling
+opt.scrolloff = 8
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
