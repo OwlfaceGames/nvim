@@ -8,6 +8,10 @@ vim.cmd.colorscheme('owly')
 -- set becon color
 vim.api.nvim_set_hl(0, 'Beacon', { bg = '#84de8b' })
 
+-- setup coloring for italic comment fonts
+local comment = vim.api.nvim_get_hl(0, { name = "Comment" })
+vim.api.nvim_set_hl(0, "Comment", vim.tbl_extend("force", comment, { italic = true }))
+
 -- tree sitter
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
