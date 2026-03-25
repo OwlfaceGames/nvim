@@ -47,7 +47,7 @@ opt["guicursor"] = ""
 -- opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:block,o:block,a:blinkwait700-blinkoff400-blinkon250" -- flahsing block
 
 -- turn on color column
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 
 -- cursorline
 -- opt.cursorline = true
@@ -70,3 +70,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function() vim.hl.on_yank() end,
 })
+
+-- remove ~ for empty lines
+vim.opt.fillchars = { eob = " " }
