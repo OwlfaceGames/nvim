@@ -8,6 +8,9 @@ vim.cmd.colorscheme('owly')
 -- set becon color
 vim.api.nvim_set_hl(0, 'Beacon', { bg = '#84de8b' })
 
+
+-- TODO: maybe put this in owly.nvim colorscheme
+
 -- setup coloring for italic comment fonts
 local comment = vim.api.nvim_get_hl(0, { name = "Comment" })
 vim.api.nvim_set_hl(0, "Comment", vim.tbl_extend("force", comment, { italic = true }))
