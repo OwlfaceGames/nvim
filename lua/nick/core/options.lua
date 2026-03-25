@@ -5,9 +5,6 @@ opt.number = false
 
 opt.wrap = false
 
--- Disable Shift+J
-vim.keymap.set('n', 'J', '<Nop>', { noremap = true })
-
 -- tabs & indentation
 opt.tabstop = 4       -- 8 spaces for tabs
 opt.shiftwidth = 4    -- 8 spaces for indent width
@@ -73,3 +70,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- remove ~ for empty lines
 vim.opt.fillchars = { eob = " " }
+
+-- make control d and u stay centered
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- make navigating search terms start centered
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
