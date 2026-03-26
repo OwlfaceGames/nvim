@@ -62,6 +62,9 @@ keymap.set('n', '<leader>ft', "<cmd>TodoTelescope<CR>", {
 keymap.set('n', '<leader>fk', "<cmd>Telescope keymaps<CR>", {
     desc = 'Telescope keymaps'
 })
+keymap.set('n', '<leader>fm', "<cmd>Telescope marks<CR>", {
+    desc = 'Telescope marks'
+})
 
 -- find word under cursor
 vim.keymap.set('n', '<leader>fw', function()
