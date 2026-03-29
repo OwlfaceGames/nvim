@@ -39,7 +39,7 @@ opt.iskeyword:append("-")
 opt.iskeyword:append("_")
 
 -- thick cursor
-vim.opt.guicursor = "a:block-Cursor"
+vim.opt.guicursor = ""
 
 -- turn on color column
 -- opt.colorcolumn = "80"
