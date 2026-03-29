@@ -41,7 +41,6 @@ return {
                     { action = 'Telescope live_grep', name = 'S: Search', section = 'Shortcuts' },
                     { action = 'Telescope find_files', name = 'F: Find Files', section = 'Shortcuts' },
                     { action = "Oil", name = "O: File Manager", section = "Shortcuts" },
-                    { action = "LazyGit", name = "G: Git", section = "Shortcuts" },
                     { action = 'qall!', name = 'Q: Quit', section = 'Shortcuts' },
                     starter.sections.recent_files(4, false, false),
                 },
