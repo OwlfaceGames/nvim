@@ -131,14 +131,6 @@ keymap.set('n', '<leader>qt', ':TodoQuickFix<CR>', {
     desc = "show todos in quick list"
 })
 
--- new floating terminal
-keymap.set('n', '<leader>t', ':ToggleTerm<CR>', {
-    desc = "open floating terminal"
-})
-
--- quit terminal mode
-keymap.set("t", "<esc><esc>", "<c-\\><c-n>", {desc = "quit terminal mode"})
-
 -- Key mappings for debugging
 keymap.set('n', '<F5>', function() require('dap').continue() end, {
     desc = "Start/Continue debugging"
