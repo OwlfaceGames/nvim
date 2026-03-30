@@ -161,19 +161,19 @@ function() require('dapui').toggle() end, {
 })
 
 -- resize vim window
-keymap.set('n', '<leader>k', ':resize -2<CR>', {
+keymap.set('n', '<leader><Up>', ':resize -2<CR>', {
     silent = true ,
     desc = "resize buffer up"
 })
-keymap.set('n', '<leader>j', ':resize +2<CR>', {
+keymap.set('n', '<leader><Down>', ':resize +2<CR>', {
     silent = true ,
     desc = "resize buffer down"
 })
-keymap.set('n', '<leader>h', ':vertical resize -2<CR>', {
+keymap.set('n', '<leader><Left>', ':vertical resize -2<CR>', {
     silent = true ,
     desc = "resize buffer left"
 })
-keymap.set('n', '<leader>l', ':vertical resize +2<CR>', {
+keymap.set('n', '<leader><Right>', ':vertical resize +2<CR>', {
     silent = true ,
     desc = "resize buffer right"
 })
