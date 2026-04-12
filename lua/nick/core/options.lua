@@ -18,6 +18,24 @@ opt.backup = false
 -- improve scrolling
 opt.scrolloff = 8
 
+-- vim settings while in a terminal buffer
+vim.api.nvim_create_autocmd('TermOpen', {
+    group = vim.api.nvim_create_augroup('custom_term_open', {clear = true}),
+    callback = function ()
+        vim.opt.number = false
+        vim.opt.relativenumber = false
+        vim.opt.winbar=""
+    end,
+})
+
+-- vim settings after leaving a terminal buffer
+vim.api.nvim_create_autocmd('TermClose', {
+    group = vim.api.nvim_create_augroup('custom_term_close', {clear = true}),
+    callback = function ()
+        vim.opt.winbar="%f"
+    end,
+})
+
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true  -- if you include mixed case in your search. assumes you want case-sensitive
