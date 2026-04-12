@@ -42,10 +42,10 @@ opt.iskeyword:append("_")
 vim.opt.guicursor = ""
 
 -- turn on color column
--- opt.colorcolumn = "80"
+opt.colorcolumn = "80"
 
 -- cursorline
--- opt.cursorline = true
+opt.cursorline = true
 
 -- make terminal title show file name
 opt.title = true
@@ -54,7 +54,7 @@ opt.title = true
 vim.diagnostic.config({ virtual_text = true })
 
 -- turn on winbar
--- opt.winbar="%f"
+opt.winbar="%f"
 
 -- create undo files
 opt.undofile = true
