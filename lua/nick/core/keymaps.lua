@@ -21,6 +21,12 @@ keymap.set('n', 'gr', vim.lsp.buf.references, {
     desc = "open references in quick list"
 })
 
+-- using <Esc> to exit terminal mode (lua config)
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', {
+    noremap = true,
+    desc = "Leave terminal mode"
+})
+
 -- clear highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", {
     desc = "Clear search highlights"

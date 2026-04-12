@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
         vim.opt.number = false
         vim.opt.relativenumber = false
         vim.opt.winbar=""
+        vim.cmd('startinsert')
     end,
 })
 
