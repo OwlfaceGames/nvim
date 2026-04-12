@@ -35,6 +35,9 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", {
     desc = "Close current split"
 })
 
+-- open terminal
+keymap.set("n", "<leader>t", ":term<CR>", { desc = "open a terminal"})
+
 -- split buffers
 keymap.set("n", "<leader>sv", "<C-w>v", {
     desc = "Split window vertically"
