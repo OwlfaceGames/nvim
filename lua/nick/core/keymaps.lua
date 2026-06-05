@@ -36,6 +36,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", {
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
+-- lazygit
+keymap.set("n", "<leader>lg", ":LazyGit<CR>", { desc = "Open lazygit" })
+
 -- close current buffer
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", {
     desc = "Close current split"

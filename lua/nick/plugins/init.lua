@@ -5,4 +5,5 @@ return {
     "norcalli/nvim-colorizer.lua",
     "mbbill/undotree",
     "OwlfaceGames/owly.nvim",
+    "kdheepak/lazygit.nvim",
 }
