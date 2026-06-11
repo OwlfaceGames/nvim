@@ -12,7 +12,13 @@ local comment = vim.api.nvim_get_hl(0, { name = "Comment" })
 vim.api.nvim_set_hl(0, "Comment", vim.tbl_extend("force", comment, { italic = true }))
 
 -- tree sitter
-require 'nvim-treesitter.configs'.setup {
+local status, treesitter = pcall(require, "nvim-treesitter.config")
+if not status then
+    -- Fallback for the older version still cached on your Mac
+    treesitter = require("nvim-treesitter.configs")
+end
+
+treesitter.setup {
     ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
     sync_install = false,
     auto_install = true,
