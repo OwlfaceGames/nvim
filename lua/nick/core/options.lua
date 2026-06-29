@@ -61,10 +61,10 @@ opt.iskeyword:append("_")
 vim.opt.guicursor = ""
 
 -- turn on color column
-opt.colorcolumn = "80"
+opt.colorcolumn = ""
 
 -- cursorline
-opt.cursorline = true
+opt.cursorline = false
 
 -- make terminal title show file name
 opt.title = true
