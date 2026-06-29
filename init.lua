@@ -11,6 +11,14 @@ vim.cmd.colorscheme('owly')
 local comment = vim.api.nvim_get_hl(0, { name = "Comment" })
 vim.api.nvim_set_hl(0, "Comment", vim.tbl_extend("force", comment, { italic = true }))
 
+-- set shell on windows
+if vim.fn.has("win32") == 1 then
+    vim.opt.shell = "pwsh" -- Use "powershell.exe" if you haven't installed PowerShell 7+
+    vim.opt.shellcmdflag = "-NoLogo -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command"
+    vim.opt.shellquote = ""
+    vim.opt.shellxquote = ""
+end
+
 -- tree sitter
 local status, treesitter = pcall(require, "nvim-treesitter.config")
 if not status then
