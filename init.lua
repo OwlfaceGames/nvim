@@ -11,6 +11,14 @@ vim.cmd.colorscheme('owly')
 local comment = vim.api.nvim_get_hl(0, { name = "Comment" })
 vim.api.nvim_set_hl(0, "Comment", vim.tbl_extend("force", comment, { italic = true }))
 
+-- stop odin from being modifiable
+vim.api.nvim_create_autocmd("BufRead", {
+  pattern = "C:/Users/nickj/scoop/apps/odin/**", -- Changed to forward slashes for cross-platform matching
+  callback = function()
+    vim.bo.modifiable = false
+  end,
+})
+
 -- set shell on windows
 if vim.fn.has("win32") == 1 then
     vim.opt.shell = "pwsh" -- Use "powershell.exe" if you haven't installed PowerShell 7+
