@@ -73,7 +73,7 @@ opt.title = true
 vim.diagnostic.config({ virtual_text = true })
 
 -- turn on winbar
-opt.winbar="%f"
+-- opt.winbar="%f"
 
 -- create undo files
 opt.undofile = true
