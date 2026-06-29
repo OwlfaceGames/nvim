@@ -30,12 +30,12 @@ vim.api.nvim_create_autocmd('TermOpen', {
 })
 
 -- vim settings after leaving a terminal buffer
-vim.api.nvim_create_autocmd('TermClose', {
-    group = vim.api.nvim_create_augroup('custom_term_close', {clear = true}),
-    callback = function ()
-        vim.opt.winbar="%f"
-    end,
-})
+-- vim.api.nvim_create_autocmd('TermClose', {
+--     group = vim.api.nvim_create_augroup('custom_term_close', {clear = true}),
+--     callback = function ()
+--         vim.opt.winbar="%f"
+--     end,
+-- })
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
