@@ -22,9 +22,6 @@ vim.api.nvim_create_autocmd("BufRead", {
 -- set shell on windows
 if vim.fn.has("win32") == 1 then
     vim.opt.shell = "pwsh"
-    vim.opt.shellcmdflag = "-HideConsoleBanner -NoLogo -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command"
-    vim.opt.shellquote = ""
-    vim.opt.shellxquote = ""
 end
 
 -- tree sitter
