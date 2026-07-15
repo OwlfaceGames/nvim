@@ -124,11 +124,6 @@ keymap.set('n', '<leader>e', ':Neotree<CR>', {
     desc = "open neotree file tree"
 })
 
--- neocodeium
-keymap.set('n', '<leader>n', ':NeoCodeium toggle<CR>', {
-    desc = "turn on ai auto complete"
-})
-
 -- quick list
 keymap.set('n', '<leader>qo', ':copen<CR>', {
     desc = "open quick fix list"
@@ -141,35 +136,6 @@ keymap.set('n', '<leader>qp', ':cprev<CR>', {
 })
 keymap.set('n', '<leader>qt', ':TodoQuickFix<CR>', {
     desc = "show todos in quick list"
-})
-
--- Key mappings for debugging
-keymap.set('n', '<F5>', function() require('dap').continue() end, {
-    desc = "Start/Continue debugging"
-})
-keymap.set('n', '<F4>', function() require('dap').terminate() end, {
-    desc = "Stop debugging"
-})
-keymap.set('n', '<F1>', function() require('dap').step_over() end, {
-    desc = "Step over in debugger"
-})
-keymap.set('n', '<F2>', function() require('dap').step_into() end, {
-    desc = "Step into in debugger"
-})
-keymap.set('n', '<F3>', function() require('dap').step_out() end, {
-    desc = "Step out in debugger"
-})
-keymap.set('n', '<Leader>b',
-function() require('dap').toggle_breakpoint() end, {
-    desc = "Toggle breakpoint for debugger"
-})
-keymap.set('n', '<Leader>dr',
-function() require('dap').repl.open() end, {
-    desc = "Open DAP REPL for debugger"
-})
-keymap.set('n', '<Leader>du',
-function() require('dapui').toggle() end, {
-    desc = "Toggle DAP UI for debugger"
 })
 
 -- resize vim window
